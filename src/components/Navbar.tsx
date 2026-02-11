@@ -29,13 +29,25 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-8 font-medium items-center">
           <li>
-            <Link to="/products" className="hover:text-primary">
-              Shop
+            <Link to="/about" className="hover:text-primary">
+              About
             </Link>
           </li>
-          <li className="hover:text-primary cursor-pointer">Men</li>
-          <li className="hover:text-primary cursor-pointer">Women</li>
-          <li className="hover:text-primary cursor-pointer">New Drops</li>
+          <li>
+            <Link to="/experience" className="hover:text-primary">
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link to="/skills" className="hover:text-primary">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-primary">
+              Contact
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-4">
