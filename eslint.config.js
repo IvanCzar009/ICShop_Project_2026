@@ -20,4 +20,24 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  // Allow linting for plain JS/JSX files (project includes .jsx components)
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
+      globals: globals.browser,
+    },
+    rules: {
+      // JSX usage detection can be handled differently across projects; relax unused-vars for JS/JSX files
+      'no-unused-vars': 'off',
+    },
+  },
 ])
